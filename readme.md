@@ -1,5 +1,3 @@
-# This is a reversi by ZhaYue 3150103588
-
 ## compile command
 windres resource.rc resource.o
 gcc -mwindows chess_board.c MCTS.c reversi.c  resource.h  resource.o -o game

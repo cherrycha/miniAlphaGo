@@ -1,0 +1,32 @@
+#include"resource.h"
+#include<windows.h>
+
+IDI_ICON1 ICON "res/icon.ico"
+
+IDR_MENU1 MENU       //MENU RESOURCE
+
+BEGIN
+    POPUP "Option"        // POPUP RESOURCE
+     BEGIN
+            MENUITEM "&New Game",        ID_NEW_GAME    // MENUITEM  STATEMENT
+            MENUITEM SEPARATOR           // MENUITEM  STATEMENT
+            MENUITEM "E&xit",         ID_EXIT_GAME  // MENUITEM  STATEMENT
+     END
+      POPUP "Player"
+          BEGIN
+                 MENUITEM "&Black",       ID_PLAYER_BLACK
+                 MENUITEM "&White",         ID_PLAYER_WHITE
+
+         END
+    POPUP "Help"
+         BEGIN
+                MENUITEM "&How to play?",       ID_HELP
+                MENUITEM "&back one step(only once)",        ID_BACK    // MENUITEM  STATEMENT
+        END
+END
+
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "n",            ID_NEW_GAME,               VIRTKEY, CONTROL, ALT, NOINVERT
+END
